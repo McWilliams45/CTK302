@@ -10,8 +10,8 @@ function setup() {
 
 function draw() {
 background("grey"); 
-Image(i1, width/2, height /2-120 , 100, 100) ; 
-Image(i2, width/2, height /2 , 100, 100) ; 
-Image(i3, width/2, height /2 + 120, 100, 100) ; 
+image(i1, width/2, height /2-120 , 100, 100) ; 
+image(i2, width/2, height /2 , 100, 100) ; 
+image(i3, width/2, height /2 + 120, 100, 100) ; 
 
 }
