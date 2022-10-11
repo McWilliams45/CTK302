@@ -1,6 +1,7 @@
 var mic;
 var vol = 0;
 var approachingVol = 0;
+let i1;
 
 // variables that you might want to tweak
 let theLoudestItGets = 0.2; // check your mic inputs and see how loud it gets, put it here.
@@ -8,6 +9,8 @@ var ease = 0.08; // how responsive do you want this? Higher numbers mean faster 
 
 function setup() {
   createCanvas(400, 400);
+  imageMode(CENTER);
+  i1 = loadImage("assets/shhhh.jpeg") ;
 
   // code for initializing mic in.
   mic = new p5.AudioIn(); // what does "new" mean?
@@ -15,7 +18,8 @@ function setup() {
 }
 
 function draw() {
-  background("green");
+  //background("green");
+  image(i1, width/ 2, height / 2 , 500, 500) ; 
 
   // get the sound input
   vol = mic.getLevel(); // returned level is between 0 and 1
@@ -26,7 +30,7 @@ function draw() {
   // text on the screen for debugging
   textSize(18);
   text(
-    "Click the screen first to give\npermission for mic input.\nMy volume is " +
+    "TRY NOT TO MAKE NOISE!!!!\nMy volume is " +
       vol.toFixed(3) +
       "\nApproaching Vol = " +
       approachingVol.toFixed(3),
