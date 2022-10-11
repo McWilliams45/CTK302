@@ -1,17 +1,18 @@
 let x = 0;
-let f1= ("assets/happy.otf"); 
+let f1; 
 function setup() {
   createCanvas(500, 500);
+  f1 = loadFont("assets/rift.otf"); 
 }
 
 function draw() {
   background (100); 
-  
   textSize(128);
-text("BOOOO!", x, 100); 
+  textFont(f1); 
+text("Spooky SZN!", x, 200); 
 x+= 5;  
 if (x > width){
-  x = -500; 
+  x = -1000; 
 }
 
 }
